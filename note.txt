@@ -1,0 +1,13 @@
+
+page/
+    login page
+    register page
+
+
+--- technology ---
+
+tailwindcss
+react-router-dom
+aos
+react-icons
+axios (fetch api)
