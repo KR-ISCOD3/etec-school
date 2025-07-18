@@ -20,6 +20,36 @@ function PopularCourse() {
           {/* card */}
           <div className="mt-10 lg:mt-5 flex justify-between flex-wrap gap-3 xl:gap-5">
             {/* loop card from course */}
+
+            {
+              loading && (
+                <>
+                  {Array.from({ length: 6 }).map((_, i) => (
+                    <div key={i} className="w-full sm:w-[49%] lg:w-[32%] rounded-lg overflow-hidden shadow-lg animate-pulse">
+                      <div className="w-full h-[220px] bg-gray-300" />
+                      <div className="p-4 space-y-4">
+                        <div className="h-6 bg-gray-300 rounded w-3/4" />
+                        <div className="flex justify-between items-center border-b border-gray-300 pb-2">
+                          <div className="flex items-center gap-2">
+                            <div className="w-4 h-4 bg-gray-300 rounded-full" />
+                            <div className="h-4 w-16 bg-gray-300 rounded" />
+                          </div>
+                          <div className="h-6 w-12 bg-gray-300 rounded" />
+                        </div>
+                        <div className="flex justify-between items-center mt-3">
+                          <div className="flex items-center gap-2">
+                            <div className="w-4 h-4 bg-gray-300 rounded-full" />
+                            <div className="h-4 w-24 bg-gray-300 rounded" />
+                          </div>
+                          <div className="h-8 w-20 bg-gray-300 rounded-3xl" />
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </>
+              )
+            }
+
             {
               course.map((v,i)=>{
                 return(
